@@ -1,0 +1,4 @@
+<div *ngFor="let block of blocks$ | async">
+  <app-block [block]="block" (update)="updateBlock($event)"></app-block>
+</div>
+<button (click)="addBlock()">Add Block</button>
