@@ -1,17 +1,26 @@
 <div class="pros-cons">
   <div class="pros">
     <h3>Pros</h3>
+
     <ul>
-      <li *ngFor="let pro of pros">{{ pro }}</li>
+        @for (pro of pros; track pro) {
+            <li>{{ pro }}</li>
+        }
     </ul>
+
     <input type="text" #proInput placeholder="Add a pro" />
     <button (click)="addPro(proInput.value); proInput.value=''">Add Pro</button>
   </div>
+
   <div class="cons">
     <h3>Cons</h3>
+
     <ul>
-      <li *ngFor="let con of cons">{{ con }}</li>
+        @for (con of cons; track con) {
+            <li>{{ con }}</li>
+        }
     </ul>
+
     <input type="text" #conInput placeholder="Add a con" />
     <button (click)="addCon(conInput.value); conInput.value=''">Add Con</button>
   </div>

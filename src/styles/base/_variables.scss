@@ -1,0 +1,78 @@
+// Colors - global
+$primary-color: #0877be;
+$secondary-color: #f48120;
+$success-color: #99cc33;
+$error-color: #cc3300;
+$warning-color: #ffae42;
+$link-color: #0076be;
+$base-text-color: #666666;
+$base-body-background-color: #fafafa;
+$text-highlight-color: #0077bf;
+$glass-effect-color: #005a85;
+
+// Tables - global
+$table-row: #c2dbff;
+$table-row-highlighted: #5788d5;
+
+// Colors - description items
+$description-items: #c0c0c0;
+
+// Colors - material
+$material-primary-color: #3f51b5;
+
+// Colors - footer
+$footer-link-color: #ababab;
+
+// Colors - navbar
+$navbar-search-color: #000;
+
+$clr-black: #000;
+$clr-black-100: #181818;
+$clr-black-60: #747474;
+$clr-black-40: #a3a3a3;
+$clr-black-20: #d1d1d1;
+$clr-black-10: #e8e8e8;
+$clr-black-5: #f3f3f3;
+
+$clr-blue-100: #4284d7;
+$clr-blue-60: #8eb5e7;
+$clr-blue-40: #b3ceef;
+$clr-blue-20: #d9e6f7;
+$clr-blue-10: #ecf3fb;
+$clr-blue-5: #f6f9fd;
+
+$clr-red-100: #eb5055;
+$clr-red-60: #f39699;
+$clr-red-40: #f7b9bb;
+$clr-red-20: #fbdcdd;
+$clr-red-10: #fdedee;
+$clr-red-5: #fef6f6;
+
+$clr-green-100: #00b894;
+$clr-green-60: #66d4bf;
+$clr-green-40: #99e3d4;
+$clr-green-20: #ccf1ea;
+$clr-green-10: #e5f8f4;
+$clr-green-5: #fef6f6;
+
+$clr-gray-10: #eef0f4;
+$clr-gray-5: #f5f6f8;
+
+$clr-white: #ffffff;
+
+// transitions - global
+$transition-02: 0.2s;
+$transition-03: 0.3s;
+
+// border-radius - global
+$border-radius-circle: 50%;
+$border-radius-100: 6.25rem;
+
+/* Device Definitions */
+$device-xl: 1920px; // 120rem
+$device-lg: 1280px; // 80rem
+$device-md: 960px; // 60rem
+$device-sm: 720px; // 45rem
+$device-xs: 600px; // 37.5rem
+
+$main-theme: light;

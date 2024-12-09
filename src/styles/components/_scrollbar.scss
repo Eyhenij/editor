@@ -1,0 +1,28 @@
+@use '../base/variables' as vars;
+@use '../base/mixin' as mixins;
+
+::-webkit-scrollbar {
+    display: none;
+    width: mixins.rem(12);
+}
+
+::-webkit-scrollbar:horizontal {
+    height: mixins.rem(12);
+}
+
+::-webkit-scrollbar-thumb {
+    border: mixins.rem(3) solid transparent;
+    border-radius: mixins.rem(6);
+    background: var(--secondary-200);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: mixins.rem(2) solid transparent;
+    background: var(--secondary-400);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-track:hover {
+    border: mixins.rem(1) solid var(--secondary-100);
+}

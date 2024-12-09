@@ -1,0 +1,40 @@
+:host {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .c-page {
+        height: 100%;
+        width: 100%;
+        max-width: 1200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 3rem 1rem;
+
+        &__toolbar {
+            height: 60px;
+        }
+
+        &__container {
+
+        }
+
+        &__content {
+
+        }
+
+        &__footer {
+
+        }
+    }
+
+    .btn + .btn {
+        margin-left: 1rem;
+    }
+}

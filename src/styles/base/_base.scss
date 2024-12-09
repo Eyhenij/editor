@@ -1,0 +1,47 @@
+@use '../global/palette' as palette;
+@use '../global/utils' as utils;
+
+:root {
+    @each $family, $set in palette.$palette {
+        @each $saturate, $clr in $set {
+            #{utils.getCssVar($family, $saturate)}: #{$clr};
+        }
+    }
+
+    --font-default: roboto, sans-serif;
+    --clr-black: #000;
+    --clr-white: #fff;
+    --bg-main: rgb(255 255 255 / 100%);
+    --bg-alt-top: rgb(238 240 244 / 100%);
+    --bg-dark: rgb(27 27 27 / 100%);
+    --bg-alt-dark: rgb(45 45 45 / 100%);
+    --bg-hover-header: rgb(70 70 70 / 100%);
+    --bg-hover-footer: rgb(51 51 51 / 100%);
+    --bg-main-content: rgb(237 237 237 / 100%);
+    --accent-mono: rgb(24 24 24 / 100%);
+    --input-clr: rgb(122 122 122 / 100%);
+    --disable-btn: rgb(245 245 245 / 100%);
+    --border-radius: 0.5rem;
+    --shadow: rgb(0 0 0 / 15%);
+    --grid-gutter: 20px;
+    --grid-margin: 20px;
+    --form-vertical-margin: 40px;
+    --shadow-blur-xs: 4px;
+    --shadow-blur-s: 8px;
+    --shadow-blur-m: 16px;
+    --shadow-blur-l: 32px;
+    --corner-radius-xs: 4px;
+    --corner-radius-s: 8px;
+    --corner-radius-m: 16px;
+    --sh-elevation-s-light: 0px var(--shadow-blur-s) var(--shadow-blur-s) 0 var(--shadow);
+    --sh-elevation-l-light: 0px var(--shadow-blur-m) var(--shadow-blur-l) 0 var(--shadow);
+    --sh-regular-s-light: 0px 0px var(--shadow-blur-s) 0px var(--shadow);
+    --sh-regular-s-darker: 0px 0px var(--shadow-blur-s) 0px var(--shadow);
+    --sh-regular-m-darker: 0px 0px var(--shadow-blur-m) 0px var(--shadow);
+    --sh-regular-l-darker: 0px 0px var(--shadow-blur-l) 0px var(--shadow);
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

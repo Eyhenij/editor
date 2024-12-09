@@ -1,0 +1,26 @@
+@use '@angular/material/index' as mat;
+@use '../base/variables' as vars;
+
+@include mat.core();
+
+$mat-theme: mat.define-theme(
+    (
+        color: (
+            theme-type: vars.$main-theme,
+            primary: mat.$azure-palette,
+        ),
+        typography: (
+            plain-family: var(--font-default),
+            bold-weight: 900,
+            medium-weight: 500,
+            regular-weight: 400,
+        ),
+        density: (
+            scale: -1,
+        ),
+    )
+);
+
+.mat-theme {
+    @include mat.all-component-themes($mat-theme);
+}

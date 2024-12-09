@@ -1,0 +1,36 @@
+@use '../base/mixin' as mixins;
+
+:root {
+    --mdc-snackbar-container-color: var(--bg-alt-dark);
+    --mdc-snackbar-supporting-text-color: var(--clr-white);
+    --mdc-snackbar-container-shape: 0.5rem;
+    --snack-bar-icon-color: var(--clr-white);
+    --snack-bar-action-color: var(--clr-white);
+}
+
+.snack-bar-success-colored {
+    --mdc-snackbar-container-color: var(--success-500);
+    --snack-bar-action-color: var(--success-500);
+}
+
+.snack-bar-warning-colored {
+    --mdc-snackbar-container-color: var(--warning-500);
+    --snack-bar-action-color: var(--warning-500);
+}
+
+.snack-bar-error-colored {
+    --mdc-snackbar-container-color: var(--error-500);
+    --snack-bar-action-color: var(--error-500);
+}
+
+.snack-bar-success {
+    --snack-bar-icon-color: var(--success-500);
+}
+
+.snack-bar-warning {
+    --snack-bar-icon-color: var(--warning-500);
+}
+
+.snack-bar-danger {
+    --snack-bar-icon-color: var(--error-500);
+}

@@ -1,9 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-pros-cons',
   templateUrl: './pros-cons.component.html',
-  styleUrls: ['./pros-cons.component.css']
+  styleUrls: ['./pros-cons.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProsConsComponent {
   @Input() pros: string[] = [];

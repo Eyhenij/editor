@@ -1,0 +1,129 @@
+@use 'sass:math';
+@use 'sass:map';
+
+$browser-context: 14.4;
+@function vw($valueRem, $context: $browser-context) {
+    @return #{math.div($valueRem, $context)}vw;
+}
+
+// px to rem
+// font-size: rem(16);
+$browser-context: 16;
+@function rem($valueRem, $context: $browser-context) {
+    @return #{math.div($valueRem, $context)}rem;
+}
+
+// media query
+// @include media-breakpoint-down($device-sm) { font-size: 1rem; }
+@mixin media-breakpoint-up($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($size) {
+    @media screen and (max-width: $size - 1) {
+        @content;
+    }
+}
+
+@mixin box-size($size) {
+    width: rem($size);
+    height: rem($size);
+}
+
+@mixin circle($size) {
+    @include box-size($size);
+
+    border-radius: var(--border-radius-circle);
+}
+
+@mixin line-clamp($value) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $value;
+}
+
+@mixin font-styles($size, $line-height, $font-weight: 400) {
+    font-size: rem($size);
+    font-weight: $font-weight;
+    line-height: rem($line-height);
+}
+
+$font-size-map: (
+    xxs: var(--font-size-xxs),
+    xs: var(--font-size-xs),
+    sm: var(--font-size-sm),
+    md: var(--font-size-md),
+    lg: var(--font-size-lg),
+    xl: var(--font-size-xl),
+    xxl: var(--font-size-xxl),
+) !default;
+
+$line-heights-map: (
+    xxs: var(--line-height-xxs),
+    xs: var(--line-height-xs),
+    sm: var(--line-height-sm),
+    md: var(--line-height-md),
+    lg: var(--line-height-lg),
+    xl: var(--line-height-xl),
+    xxl: var(--line-height-xxl),
+) !default;
+
+@mixin item-size($size: md) {
+    @if map-has-key($font-size-map, $size) {
+        font-size: map.get($font-size-map, $size);
+    }
+
+    @if map-has-key($line-heights-map, $size) {
+        line-height: map.get($line-heights-map, $size);
+    }
+}
+
+@mixin use-size--xxs {
+    @include item-size(xxs);
+}
+
+@mixin use-size--xs {
+    @include item-size(xs);
+}
+
+@mixin use-size--sm {
+    @include item-size(sm);
+}
+
+@mixin use-size--md {
+    @include item-size();
+}
+
+@mixin use-size--lg {
+    @include item-size(lg);
+}
+
+@mixin use-size--xl {
+    @include item-size(xl);
+}
+
+@mixin use-size--xxl {
+    @include item-size(xxl);
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    @include flex-row-center();
+
+    flex-direction: column;
+}
+
+@mixin use-container {
+    width: var(--cc-container-width);
+    padding: 0 var(--cc-container-padding);
+    margin: 0 auto;
+}
