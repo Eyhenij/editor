@@ -1,4 +1,10 @@
 :host {
+  background-color: var(--);
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 50px;
+  width: 100%;
+
   [contenteditable] {
     outline: none;
   }
@@ -23,10 +29,4 @@
   h3 {
     font-size: 1.25rem;
   }
-
-  border: 1px solid grey;
-  padding: 1rem;
-  margin: 1rem;
-  min-height: 50px;
-  width: 100%;
 }

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input, InputSignal, Signal } from '@angular/core';
-import { IBlock } from '../../interfaces/block';
+import { IBlock } from '../../interfaces/block.model';
 import { ProsConsComponent } from '../pros-cons/pros-cons.component';
 
 @Component({

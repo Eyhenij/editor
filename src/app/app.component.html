@@ -8,11 +8,9 @@
     </nav>
 
     <div class="c-page__content">
-        <div cdkDropList (cdkDropListDropped)="reorderBlocks($event)">
-            @for (block of blocks; track block) {
-                <div cdkDrag>
-                    <app-block [block]="block"/>
-                </div>
+        <div cdkDropList (cdkDropListDropped)="onDrop($event)">
+            @for (block of blocks(); track block) {
+                <app-block cdkDrag [block]="block"/>
             }
         </div>
     </div>

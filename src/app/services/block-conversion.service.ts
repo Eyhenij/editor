@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IBlock } from '../interfaces/block';
+import { IBlock } from '../interfaces/block.model';
 
 @Injectable({
   providedIn: 'root'
