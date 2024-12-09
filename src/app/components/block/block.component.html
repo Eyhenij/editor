@@ -1,0 +1,9 @@
+<div [contenteditable]="isContentEditable" [attr.data-block-id]="block.id">
+  <ng-container [ngSwitch]="block.type">
+    <p *ngSwitchCase="'paragraph'">{{ block.content }}</p>
+    <h1 *ngSwitchCase="'heading1'">{{ block.content }}</h1>
+    <h2 *ngSwitchCase="'heading2'">{{ block.content }}</h2>
+    <h3 *ngSwitchCase="'heading3'">{{ block.content }}</h3>
+    <app-pros-cons *ngSwitchCase="'prosCons'" [block]="block"></app-pros-cons>
+  </ng-container>
+</div>
