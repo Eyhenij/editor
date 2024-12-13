@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "node_modules/rt-tools/src/styles/main.scss",
               "src/styles.scss"
             ],
             "scripts": []
