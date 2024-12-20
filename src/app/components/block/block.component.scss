@@ -1,32 +1,101 @@
 :host {
-  background-color: var(--);
-  padding: 1rem;
-  margin: 1rem;
-  min-height: 50px;
-  width: 100%;
+    display: flex;
+    background-color: var(--secondary-50);
+    border-radius: .5rem;
+    padding: .25rem .5rem;
+    margin: .5rem;
+    min-height: 30px;
+    width: 100%;
+    position: relative;
 
-  [contenteditable] {
-    outline: none;
-  }
+    &:focus,
+    &:hover {
+        .c-content-block__handle {
+            .btn {
+                visibility: visible;
+            }
+        }
+    }
 
-  p, h1, h2, h3 {
-    margin: 0;
-    padding: 0.5rem 0;
-  }
+    .c-content-block {
+        &__wrapper {
+            height: 100%;
+            width: 100%;
+        }
 
-  p {
-    font-size: 1rem;
-  }
+        &__handle {
+            position: absolute;
+            top: 3px;
+            bottom: 0;
+            left: -26px;
+            right: 100%;
 
-  h1 {
-    font-size: 2rem;
-  }
+            mat-icon {
+                padding-top: 2px;
+                font-size: 20px;
+                color: var(--clr-base-accent);
+            }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+            .btn {
+                --padding: 2px 0;
+                width: 20px;
+                height: 22px;
+                cursor: grab;
+                visibility: hidden;
 
-  h3 {
-    font-size: 1.25rem;
-  }
+                &:hover {
+                    --bg: var(--secondary-100);
+                }
+
+                &:active {
+                    --shadow: 0 0 var(--shadow-blur-s) 0 var(--secondary-100);
+                }
+            }
+
+            &:focus,
+            &:hover {
+                .btn {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__item {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    [contenteditable] {
+        outline: none;
+    }
+
+    p, h1, h2, h3 {
+        margin: 0;
+        //padding: 0.5rem 0;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
+.cdk-drag-preview {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.5rem 1rem 0 #747474;
+    background: var(--mat-option-selected-state-layer-color);
 }

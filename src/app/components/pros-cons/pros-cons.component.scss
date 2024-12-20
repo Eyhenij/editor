@@ -1,10 +1,12 @@
-/* Styles for ProsConsComponent */
+:host {
+  width: 100%;
+}
+
 .pros-cons {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 .pros, .cons {

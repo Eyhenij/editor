@@ -1,21 +1,27 @@
 @let block = this.block();
 
-<div [attr.contenteditable]="isContentEditable()" [attr.data-block-id]="block.id">
+<div class="c-content-block__handle" cdkDragHandle>
+    <button (click)="onDragHandleClick($event)" class="btn btn-sm">
+        <mat-icon fontIcon="drag_indicator" />
+    </button>
+</div>
+
+<div class="c-content-block__wrapper" [attr.data-block-id]="block.id">
     @switch (block.type) {
         @case ('paragraph') {
-            <p>{{ block.content }}</p>
+            <p class="c-content-block__item" contenteditable>{{ block.content }}</p>
         }
 
         @case ('heading1') {
-            <h1>{{ block.content }}</h1>
+            <h1 class="c-content-block__item" contenteditable>{{ block.content }}</h1>
         }
 
         @case ('heading2') {
-            <h2>{{ block.content }}</h2>
+            <h2 class="c-content-block__item" contenteditable>{{ block.content }}</h2>
         }
 
         @case ('heading3') {
-            <h3>{{ block.content }}</h3>
+            <h3 class="c-content-block__item" contenteditable>{{ block.content }}</h3>
         }
 
         @case ('prosCons') {
