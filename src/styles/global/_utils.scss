@@ -1,0 +1,3 @@
+@function getCssVar($color, $saturate) {
+    @return --#{$color}-#{$saturate};
+}

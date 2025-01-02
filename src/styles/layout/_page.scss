@@ -1,0 +1,76 @@
+@use '../base/variables' as vars;
+@use '../base/mixin' as mixins;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.c-page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 1rem;
+        overflow-y: auto;
+
+        @include mixins.media-breakpoint-down(vars.$device-md) {
+            padding: 0 1rem 1.5rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        width: 100%;
+        height: 4rem;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem 0 1rem;
+    }
+
+    &__title {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+
+        &--txt {
+            margin-right: 1.5rem;
+
+            > h5 {
+                margin: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    &__footer {
+        width: 100%;
+    }
+
+    &__placeholder {
+        height: 25rem;
+    }
+}
